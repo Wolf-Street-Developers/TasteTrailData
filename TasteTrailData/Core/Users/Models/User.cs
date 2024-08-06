@@ -1,6 +1,7 @@
 #pragma warning disable CS8618
 
 using Microsoft.AspNetCore.Identity;
+using TasteTrailData.Core.Common.Tokens.RefreshTokens.Entities;
 using TasteTrailData.Core.Feedbacks.Models;
 using TasteTrailData.Core.Venues.Models;
 
@@ -17,4 +18,5 @@ public class User : IdentityUser
     public ICollection<Feedback> Feedbacks { get; set; }
 
     public ICollection<Venue> Venues { get; set; }
+    public ICollection<RefreshToken> RefreshTokens { get; set; }
 }
