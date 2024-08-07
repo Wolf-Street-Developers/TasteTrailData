@@ -9,7 +9,7 @@ namespace TasteTrailData.Core.Common.Tokens.RefreshTokens.Services;
 public interface IRefreshtokenService
 {
     public Task DeleteRangeRefreshTokensAsync(string userId);
-    Task<int> DeleteByIdAsync(Guid id);
-    Task<int> CreateAsync(RefreshToken entity);
+    Task<Guid> DeleteByIdAsync(Guid id);
+    Task<Guid> CreateAsync(RefreshToken entity);
     Task<RefreshToken?> GetByIdAsync(Guid id);
 }

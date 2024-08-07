@@ -1,6 +1,6 @@
 namespace TasteTrail.Data.src.Core.Common.Repositories.Base;
 
-public interface ICreateAsync<TEntity> 
+public interface ICreateAsync<TEntity, TId> 
 {
-    Task<int> CreateAsync(TEntity entity);
+    Task<TId> CreateAsync(TEntity entity);
 }

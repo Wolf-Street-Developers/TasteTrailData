@@ -4,7 +4,7 @@ using TasteTrailData.Core.Venues.Models;
 namespace TasteTrailData.Core.Venues.Repositories;
 
 public interface IVenueRepository : IGetByCountAsync<Venue>, IGetByIdAsync<Venue, int>,
-ICreateAsync<Venue>, IDeleteByIdAsync<int>, IPutAsync<Venue>
+ICreateAsync<Venue, int>, IDeleteByIdAsync<int>, IPutAsync<Venue, int>
 {
     Task<List<Venue>> GetAllAsync();
 
