@@ -9,7 +9,7 @@ public interface IIdentityAuthService
 
     Task<AccessToken> SignInAsync(string username, string password, bool rememberMe);
     
-    Task SignOutAsync(Guid refresh, string jwt);
+    Task<Guid> SignOutAsync(Guid refresh, string jwt);
 
     Task<AccessToken> UpdateToken(Guid refresh, string jwt);
 }
