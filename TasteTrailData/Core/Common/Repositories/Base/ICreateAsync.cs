@@ -1,4 +1,4 @@
-namespace TasteTrail.Data.src.Core.Common.Repositories.Base;
+namespace TasteTrailData.Core.Common.Repositories.Base;
 
 public interface ICreateAsync<TEntity, TId> 
 {
