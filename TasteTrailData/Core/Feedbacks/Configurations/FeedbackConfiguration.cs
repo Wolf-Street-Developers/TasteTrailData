@@ -11,11 +11,6 @@ public class FeedbackConfiguration : IEntityTypeConfiguration<Feedback>
     {
         builder.HasKey(f => f.Id); 
 
-        builder.HasOne(f => f.Venue)
-            .WithMany(v => v.Feedbacks)
-            .HasForeignKey(f => f.VenueId)
-            .OnDelete(DeleteBehavior.Restrict);
-
         builder.Property(f => f.Text)
             .IsRequired();
 

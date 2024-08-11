@@ -27,8 +27,6 @@ public class Venue
 
     public float OverallRating { get; set; }
 
-    public ICollection<Menu> Menus { get; set; }
-
     public ICollection<VenuePhoto> Photos { get; set; }
 
     public ICollection<Feedback> Feedbacks { get; set; }

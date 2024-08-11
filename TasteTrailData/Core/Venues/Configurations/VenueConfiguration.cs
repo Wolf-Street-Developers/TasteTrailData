@@ -38,17 +38,9 @@ public class VenueConfiguration : IEntityTypeConfiguration<Venue>
         builder.Property(v => v.OverallRating)
             .IsRequired();
 
-        builder.HasMany(v => v.Menus)
-            .WithOne(m => m.Venue)
-            .HasForeignKey(m => m.VenueId);
-
         builder.HasMany(v => v.Photos)
             .WithOne(p => p.Venue)
             .HasForeignKey(p => p.VenueId);
-
-        builder.HasMany(v => v.Feedbacks)
-            .WithOne(f => f.Venue)
-            .HasForeignKey(f => f.VenueId);
 
         builder
             .HasOne(v => v.User)

@@ -18,8 +18,4 @@ public class Feedback
     public string? UserId { get; set; }
 
     public User User { get; set; }
-
-    public int VenueId { get; set; }
-    
-    public Venue Venue { get; set; }
 }
