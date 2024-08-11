@@ -1,6 +1,6 @@
 namespace TasteTrailData.Core.Common.Repositories.Base;
 
-public interface IDeleteByIdAsync<TId> 
+public interface IDeleteByIdAsync<TId, TReturn> 
 {
-    Task<TId> DeleteByIdAsync(TId id);
+    Task<TReturn> DeleteByIdAsync(TId id);
 }

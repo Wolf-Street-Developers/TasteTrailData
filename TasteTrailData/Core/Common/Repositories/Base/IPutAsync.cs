@@ -1,6 +1,6 @@
 namespace TasteTrailData.Core.Common.Repositories.Base;
 
-public interface IPutAsync<TEntity, TId> 
+public interface IPutAsync<TEntity, TReturn> 
 {
-    Task<TId> PutAsync(TEntity entity);
+    Task<TReturn> PutAsync(TEntity entity);
 }
