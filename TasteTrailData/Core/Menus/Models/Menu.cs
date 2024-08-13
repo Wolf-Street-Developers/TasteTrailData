@@ -15,5 +15,5 @@ public class Menu
     
     public int VenueId { get; set; }
 
-    public required ICollection<MenuItem> MenuItems { get; set; }
+    public ICollection<MenuItem> MenuItems { get; set; }
 }

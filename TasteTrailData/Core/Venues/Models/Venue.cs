@@ -28,11 +28,11 @@ public class Venue
 
     public float OverallRating { get; set; }
 
-    public required ICollection<Menu> Menus { get; set; }
+    public ICollection<Menu> Menus { get; set; }
 
-    public required ICollection<VenuePhoto> Photos { get; set; }
+    public ICollection<VenuePhoto> Photos { get; set; }
 
-    public required ICollection<Feedback> Feedbacks { get; set; }
+    public ICollection<Feedback> Feedbacks { get; set; }
 
     public required string UserId { get; set; }
     

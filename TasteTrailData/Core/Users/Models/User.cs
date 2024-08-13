@@ -15,9 +15,9 @@ public class User : IdentityUser
 
     public string? AvatarPath { get; set; }
 
-    public required ICollection<Feedback> Feedbacks { get; set; }
+    public ICollection<Feedback> Feedbacks { get; set; }
 
-    public required ICollection<Venue> Venues { get; set; }
+    public ICollection<Venue> Venues { get; set; }
 
-    public required ICollection<RefreshToken> RefreshTokens { get; set; }
+    public ICollection<RefreshToken> RefreshTokens { get; set; }
 }
