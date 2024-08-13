@@ -38,9 +38,20 @@ public class VenueConfiguration : IEntityTypeConfiguration<Venue>
         builder.Property(v => v.OverallRating)
             .IsRequired();
 
+        builder.HasMany(v => v.Menus)
+            .WithOne()
+            .HasForeignKey(m => m.VenueId)
+            .OnDelete(DeleteBehavior.Cascade);
+
         builder.HasMany(v => v.Photos)
-            .WithOne(p => p.Venue)
-            .HasForeignKey(p => p.VenueId);
+            .WithOne()
+            .HasForeignKey(p => p.VenueId)
+            .OnDelete(DeleteBehavior.Cascade);
+
+        builder.HasMany(v => v.Feedbacks)
+            .WithOne()
+            .HasForeignKey(f => f.VenueId)
+            .OnDelete(DeleteBehavior.Cascade);
 
         builder
             .HasOne(v => v.User)

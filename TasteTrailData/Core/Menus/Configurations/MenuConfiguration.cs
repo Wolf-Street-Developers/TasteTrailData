@@ -17,5 +17,10 @@ public class MenuConfiguration : IEntityTypeConfiguration<Menu>
 
             builder.Property(m => m.Description)
                 .HasMaxLength(500);
+
+            builder.HasMany(m => m.MenuItems)
+                .WithOne()
+                .HasForeignKey(mi => mi.MenuId)
+                .OnDelete(DeleteBehavior.Cascade);
     }
 }

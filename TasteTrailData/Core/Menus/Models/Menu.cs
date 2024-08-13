@@ -9,7 +9,11 @@ public class Menu
 {
     public int Id { get; set; }
 
-    public string Name { get; set; }
+    public required string Name { get; set; }
 
     public string? Description { get; set; }
+    
+    public int VenueId { get; set; }
+
+    public required ICollection<MenuItem> MenuItems { get; set; }
 }

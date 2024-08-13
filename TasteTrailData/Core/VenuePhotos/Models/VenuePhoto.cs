@@ -7,7 +7,8 @@ using TasteTrailData.Core.Venues.Models;
 public class VenuePhoto
 {
     public int Id { get; set; }
+
     public int VenueId { get; set; }
-    public string PhotoUrlPath { get; set; }
-    public Venue Venue { get; set; }
+
+    public required string PhotoUrlPath { get; set; }
 }

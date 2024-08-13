@@ -13,10 +13,5 @@ public class VenuePhotoConfiguration : IEntityTypeConfiguration<VenuePhoto>
         builder.Property(vp => vp.PhotoUrlPath)
             .IsRequired()
             .HasMaxLength(500);
-
-        builder.HasOne(vp => vp.Venue)
-            .WithMany(v => v.Photos)
-            .HasForeignKey(vp => vp.VenueId)
-            .OnDelete(DeleteBehavior.Cascade);
     }
 }
