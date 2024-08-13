@@ -6,16 +6,20 @@
     <Nullable>enable</Nullable>
 
     <PackageId>TasteTrailData</PackageId>
-    <Version>2.0.5</Version>
+    <Version>2.0.6</Version>
     <Author>Wolf-Street-Developers</Author>
     <Product>TasteTrail</Product>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="MediatR" Version="12.3.0" />
+    
     <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.7" />
+    
     <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="8.0.2" />
+    
+    <PackageReference Include="FluentValidation" Version="11.9.1" />
     <PackageReference Include="FluentValidation.AspNetCore" Version="11.3.0" />
     <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.9.1" />
   </ItemGroup>
