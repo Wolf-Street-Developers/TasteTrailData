@@ -15,6 +15,14 @@ public static class InitCorsMethod
                     .AllowAnyHeader()
                     .AllowAnyMethod();
             });
+
+            options.AddPolicy(name: "BlazorPolicy", policyBuilder =>
+            {
+                policyBuilder
+                    .WithOrigins("http://localhost:5137")
+                    .AllowAnyHeader()
+                    .AllowAnyMethod();
+            });
         });
     }
 }
