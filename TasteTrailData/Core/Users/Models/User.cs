@@ -3,6 +3,8 @@
 using Microsoft.AspNetCore.Identity;
 using TasteTrailData.Core.Common.Tokens.RefreshTokens.Entities;
 using TasteTrailData.Core.Feedbacks.Models;
+using TasteTrailData.Core.MenuItems.Models;
+using TasteTrailData.Core.Menus.Models;
 using TasteTrailData.Core.Venues.Models;
 
 namespace TasteTrailData.Core.Users.Models;
@@ -20,4 +22,8 @@ public class User : IdentityUser
     public ICollection<Venue> Venues { get; set; }
 
     public ICollection<RefreshToken> RefreshTokens { get; set; }
+
+    public ICollection<MenuItem> MenuItems { get; set; }
+
+    public ICollection<Menu> Menus { get; set; }
 }
