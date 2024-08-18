@@ -15,7 +15,7 @@ public class Menu
     
     public int VenueId { get; set; }
 
-    public int UserId { get; set; }
+    public string UserId { get; set; }
 
     public ICollection<MenuItem> MenuItems { get; set; }
 }
