@@ -10,5 +10,9 @@ public class RefreshTokenConfiguration : IEntityTypeConfiguration<RefreshToken>
     {
         builder
             .HasKey(rt => rt.Token);
+        
+        builder
+            .Property(f => f.CreationDate)
+            .IsRequired();
     }
 }
