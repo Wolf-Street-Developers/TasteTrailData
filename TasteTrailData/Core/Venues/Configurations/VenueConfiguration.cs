@@ -52,11 +52,5 @@ public class VenueConfiguration : IEntityTypeConfiguration<Venue>
             .WithOne()
             .HasForeignKey(f => f.VenueId)
             .OnDelete(DeleteBehavior.Cascade);
-
-        builder
-            .HasOne(v => v.User)
-            .WithMany(u => u.Venues)
-            .HasForeignKey(v => v.UserId)
-            .OnDelete(DeleteBehavior.Cascade);
     }
 }

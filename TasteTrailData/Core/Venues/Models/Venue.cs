@@ -4,7 +4,7 @@ using TasteTrailData.Core.VenuePhotos.Models;
 using TasteTrailData.Core.Feedbacks.Models;
 using TasteTrailData.Core.Menus.Models;
 using TasteTrailData.Core.Users.Models;
-using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
 
 namespace TasteTrailData.Core.Venues.Models;
 
@@ -28,13 +28,14 @@ public class Venue
 
     public float OverallRating { get; set; }
 
+    [JsonIgnore]
     public ICollection<Menu> Menus { get; set; }
 
+    [JsonIgnore]
     public ICollection<VenuePhoto> Photos { get; set; }
 
+    [JsonIgnore]
     public ICollection<Feedback> Feedbacks { get; set; }
 
     public required string UserId { get; set; }
-    
-    public User User { get; set; }
 }

@@ -1,5 +1,6 @@
 #pragma warning disable CS8618
 
+using System.Text.Json.Serialization;
 using Microsoft.AspNetCore.Identity;
 using TasteTrailData.Core.Common.Tokens.RefreshTokens.Entities;
 using TasteTrailData.Core.Feedbacks.Models;
@@ -17,13 +18,18 @@ public class User : IdentityUser
 
     public string? AvatarPath { get; set; }
 
+    [JsonIgnore]
     public ICollection<Feedback> Feedbacks { get; set; }
 
+    [JsonIgnore]
     public ICollection<Venue> Venues { get; set; }
 
+    [JsonIgnore]
     public ICollection<RefreshToken> RefreshTokens { get; set; }
 
+    [JsonIgnore]
     public ICollection<MenuItem> MenuItems { get; set; }
 
+    [JsonIgnore]
     public ICollection<Menu> Menus { get; set; }
 }
