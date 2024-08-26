@@ -8,7 +8,7 @@ public class Feedback : ICreateable, IRateable, ILikeable
 
     public string? Text { get; set; }
 
-    public int Rating { get; set; }
+    public decimal Rating { get; set; }
 
     public DateTime CreationDate { get; set; }
 

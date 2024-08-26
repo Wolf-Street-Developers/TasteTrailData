@@ -15,7 +15,8 @@ public class FeedbackConfiguration : IEntityTypeConfiguration<Feedback>
             .IsRequired();
 
         builder.Property(f => f.Rating)
-            .IsRequired();
+            .IsRequired()
+            .HasPrecision(7, 2);
 
         builder.Property(f => f.Likes)
             .IsRequired();

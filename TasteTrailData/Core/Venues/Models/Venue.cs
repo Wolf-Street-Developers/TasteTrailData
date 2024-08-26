@@ -26,7 +26,7 @@ public class Venue : ICreateable, IRateable, IFeedbackable
 
     public float AveragePrice { get; set; }
 
-    public int Rating { get; set; }
+    public decimal Rating { get; set; }
     
     public DateTime CreationDate { get; set; }
 
