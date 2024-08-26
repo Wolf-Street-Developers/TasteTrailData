@@ -4,7 +4,6 @@ namespace TasteTrailData.Core.Menus.Models;
 
 using System.Text.Json.Serialization;
 using TasteTrailData.Core.MenuItems.Models;
-using TasteTrailData.Core.Venues.Models;
 
 public class Menu
 {

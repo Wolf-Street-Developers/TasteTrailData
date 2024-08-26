@@ -1,11 +1,8 @@
-#pragma warning disable CS8618
-
-using TasteTrailData.Core.Users.Models;
-using TasteTrailData.Core.Venues.Models;
+using TasteTrailData.Core.Common.Models.Base;
 
 namespace TasteTrailData.Core.Feedbacks.Models;
 
-public class Feedback
+public class Feedback : ICreateable, IRateable, ILikeable
 {
     public int Id { get; set; }
 
@@ -14,6 +11,8 @@ public class Feedback
     public int Rating { get; set; }
 
     public DateTime CreationDate { get; set; }
+
+    public int Likes { get; set; }
 
     public required string UserId { get; set; }
     

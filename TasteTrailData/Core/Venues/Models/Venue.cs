@@ -3,12 +3,12 @@
 using TasteTrailData.Core.VenuePhotos.Models;
 using TasteTrailData.Core.Feedbacks.Models;
 using TasteTrailData.Core.Menus.Models;
-using TasteTrailData.Core.Users.Models;
 using System.Text.Json.Serialization;
+using TasteTrailData.Core.Common.Models.Base;
 
 namespace TasteTrailData.Core.Venues.Models;
 
-public class Venue
+public class Venue : ICreateable, IRateable
 {
     public int Id { get; set; }
 
@@ -26,7 +26,10 @@ public class Venue
 
     public float AveragePrice { get; set; }
 
-    public float OverallRating { get; set; }
+    public int Rating { get; set; }
+    
+    public DateTime CreationDate { get; set; }
+
 
     [JsonIgnore]
     public ICollection<Menu> Menus { get; set; }

@@ -1,8 +1,10 @@
 #pragma warning disable CS8618
 
+using TasteTrailData.Core.Common.Models.Base;
+
 namespace TasteTrailData.Core.MenuItems.Models;
 
-public class MenuItem
+public class MenuItem : ILikeable
 {
         public int Id { get; set; }
 
@@ -11,6 +13,8 @@ public class MenuItem
         public string? Description { get; set; }
 
         public float Price { get; set; }
+
+        public int Likes { get; set; }
 
         public int PopularityRate { get; set; }
 

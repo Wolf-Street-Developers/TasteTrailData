@@ -20,6 +20,9 @@ public class MenuItemConfiguration : IEntityTypeConfiguration<MenuItem>
             builder.Property(mi => mi.Price)
                 .IsRequired();
 
+            builder.Property(mi => mi.Likes)
+                .IsRequired();
+
             builder.Property(mi => mi.PopularityRate)
                 .IsRequired();
     }
