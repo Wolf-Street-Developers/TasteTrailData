@@ -19,7 +19,7 @@ public static class InitCorsMethod
             options.AddPolicy(name: "BlazorPolicy", policyBuilder =>
             {
                 policyBuilder
-                    .WithOrigins("http://localhost:5137")
+                    .WithOrigins("http://20.218.160.138")
                     .AllowAnyHeader()
                     .AllowAnyMethod();
             });
