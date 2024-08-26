@@ -37,7 +37,7 @@ public class VenueConfiguration : IEntityTypeConfiguration<Venue>
 
         builder.Property(v => v.Rating)
             .IsRequired()
-            .HasPrecision(7, 2);
+            .HasPrecision(7, 3);
 
         builder.Property(v => v.CreationDate)
             .IsRequired();

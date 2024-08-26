@@ -5,6 +5,7 @@ using TasteTrailData.Core.Feedbacks.Models;
 using TasteTrailData.Core.Menus.Models;
 using System.Text.Json.Serialization;
 using TasteTrailData.Core.Common.Models.Base;
+using System.ComponentModel.DataAnnotations;
 
 namespace TasteTrailData.Core.Venues.Models;
 
@@ -26,6 +27,7 @@ public class Venue : ICreateable, IRateable, IFeedbackable
 
     public float AveragePrice { get; set; }
 
+    [Range(0, 5)]
     public decimal Rating { get; set; }
     
     public DateTime CreationDate { get; set; }
