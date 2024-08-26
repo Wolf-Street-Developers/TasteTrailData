@@ -4,7 +4,7 @@ namespace TasteTrailData.Core.Common.Managers.ImageManagers;
 
 public interface IImageManager<TId>
 {
-    Task<string> DeleteImage(TId id);
-	Task<string> SetImage (TId id, IFormFile? logo);
-	Task<string> GetDefaultImageUrl();
+    Task<string> DeleteImageAsync(TId id);
+	Task<string> SetImageAsync(TId id, IFormFile? logo);
+	string GetDefaultImageUrl();
 }
