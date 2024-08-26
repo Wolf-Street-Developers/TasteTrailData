@@ -1,4 +1,4 @@
-using TasteTrailData.Core.Filters.Specifications;
+namespace TasteTrailData.Core.Filters.Specifications;
 
 public class FilterParameters<TEntity>
 {
