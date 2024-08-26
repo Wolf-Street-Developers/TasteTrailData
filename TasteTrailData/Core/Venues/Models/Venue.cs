@@ -8,7 +8,7 @@ using TasteTrailData.Core.Common.Models.Base;
 
 namespace TasteTrailData.Core.Venues.Models;
 
-public class Venue : ICreateable, IRateable
+public class Venue : ICreateable, IRateable, IFeedbackable
 {
     public int Id { get; set; }
 
