@@ -23,6 +23,14 @@ public static class InitCorsMethod
                     .AllowAnyHeader()
                     .AllowAnyMethod();
             });
+
+            options.AddPolicy(name: "BlazorPublishPolicy", policyBuilder =>
+            {
+                policyBuilder
+                    .WithOrigins("http://20.218.160.138:80")
+                    .AllowAnyHeader()
+                    .AllowAnyMethod();
+            });
         });
     }
 }
