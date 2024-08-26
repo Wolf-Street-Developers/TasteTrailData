@@ -35,7 +35,10 @@ public class VenueConfiguration : IEntityTypeConfiguration<Venue>
         builder.Property(v => v.AveragePrice)
             .IsRequired();
 
-        builder.Property(v => v.OverallRating)
+        builder.Property(v => v.Rating)
+            .IsRequired();
+
+        builder.Property(v => v.CreationDate)
             .IsRequired();
 
         builder.HasMany(v => v.Menus)
