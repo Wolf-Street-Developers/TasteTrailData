@@ -29,9 +29,6 @@ public class VenueConfiguration : IEntityTypeConfiguration<Venue>
             .IsRequired()
             .HasMaxLength(100);
 
-        builder.Property(v => v.LogoUrlPath)
-            .HasMaxLength(500);
-
         builder.Property(v => v.AveragePrice)
             .IsRequired();
 
@@ -40,9 +37,6 @@ public class VenueConfiguration : IEntityTypeConfiguration<Venue>
             .HasPrecision(7, 3);
 
         builder.Property(v => v.CreationDate)
-            .IsRequired();
-
-        builder.Property(v => v.LogoUrlPath)
             .IsRequired();
 
         builder.HasMany(v => v.Menus)

@@ -13,7 +13,7 @@ public class Menu
 
     public string? Description { get; set; }
 
-    public required string ImageUrlPath { get; set; }
+    public string? ImageUrlPath { get; set; }
     
     public int VenueId { get; set; }
 
