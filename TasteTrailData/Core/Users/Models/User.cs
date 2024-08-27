@@ -21,7 +21,7 @@ public class User : IdentityUser
     [DefaultValue(false)]
     public bool IsMuted { get; set; }
 
-    public required string AvatarPath { get; set; }
+    public string? AvatarPath { get; set; }
 
     [JsonIgnore]
     public ICollection<Feedback> Feedbacks { get; set; }
