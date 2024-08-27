@@ -42,6 +42,9 @@ public class VenueConfiguration : IEntityTypeConfiguration<Venue>
         builder.Property(v => v.CreationDate)
             .IsRequired();
 
+        builder.Property(v => v.LogoUrlPath)
+            .IsRequired();
+
         builder.HasMany(v => v.Menus)
             .WithOne()
             .HasForeignKey(m => m.VenueId)

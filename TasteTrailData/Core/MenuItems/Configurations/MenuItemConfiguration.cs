@@ -17,6 +17,9 @@ public class MenuItemConfiguration : IEntityTypeConfiguration<MenuItem>
             builder.Property(mi => mi.Description)
                 .HasMaxLength(500);
 
+            builder.Property(mi => mi.ImageUrlPath)
+                .IsRequired();
+
             builder.Property(mi => mi.Price)
                 .IsRequired();
 

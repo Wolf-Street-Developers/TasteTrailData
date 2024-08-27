@@ -18,6 +18,9 @@ public class MenuConfiguration : IEntityTypeConfiguration<Menu>
             builder.Property(m => m.Description)
                 .HasMaxLength(500);
 
+            builder.Property(m => m.ImageUrlPath)
+                .IsRequired();
+
             builder.HasMany(m => m.MenuItems)
                 .WithOne()
                 .HasForeignKey(mi => mi.MenuId)

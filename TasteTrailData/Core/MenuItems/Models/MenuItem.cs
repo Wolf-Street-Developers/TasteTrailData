@@ -12,6 +12,8 @@ public class MenuItem : ILikeable
 
         public string? Description { get; set; }
 
+        public required string ImageUrlPath { get; set; }
+
         public float Price { get; set; }
 
         public int Likes { get; set; }

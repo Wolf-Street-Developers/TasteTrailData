@@ -23,7 +23,7 @@ public class Venue : ICreateable, IRateable, IFeedbackable
 
     public required string Email { get; set; }
 
-    public string? LogoUrlPath { get; set; }
+    public required string LogoUrlPath { get; set; }
 
     public float AveragePrice { get; set; }
 
