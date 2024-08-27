@@ -1,5 +1,9 @@
+#pragma warning disable CS8618
+
 using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
 using TasteTrailData.Core.Common.Models.Base;
+using TasteTrailData.Core.FeedbackLikes.Models;
 
 namespace TasteTrailData.Core.Feedbacks.Models;
 
@@ -19,4 +23,7 @@ public class Feedback : ICreateable, IRateable, ILikeable
     public required string UserId { get; set; }
     
     public int VenueId { get; set; }
+
+    [JsonIgnore]
+    public ICollection<FeedbackLike> FeedbackLikes { get; set; }
 }

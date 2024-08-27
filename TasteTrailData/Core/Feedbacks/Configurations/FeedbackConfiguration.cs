@@ -23,5 +23,10 @@ public class FeedbackConfiguration : IEntityTypeConfiguration<Feedback>
 
         builder.Property(f => f.CreationDate)
             .IsRequired();
+
+        builder.HasMany(u => u.FeedbackLikes)
+            .WithOne()
+            .HasForeignKey(r => r.FeedbackId)
+            .OnDelete(DeleteBehavior.Cascade);
     }
 }
