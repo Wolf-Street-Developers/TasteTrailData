@@ -6,7 +6,7 @@
     <Nullable>enable</Nullable>
 
     <PackageId>TasteTrailData</PackageId>
-    <Version>3.0.5</Version>
+    <Version>3.1.0</Version>
     <Author>Wolf-Street-Developers</Author>
     <Product>TasteTrail</Product>
   </PropertyGroup>
@@ -22,6 +22,8 @@
     <PackageReference Include="FluentValidation" Version="11.9.1" />
     <PackageReference Include="FluentValidation.AspNetCore" Version="11.3.0" />
     <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.9.1" />
+
+    <PackageReference Include="Azure.Storage.Blobs" Version="12.21.2" />
   </ItemGroup>
 
   <ItemGroup>
