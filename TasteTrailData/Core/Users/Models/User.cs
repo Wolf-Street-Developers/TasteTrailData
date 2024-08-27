@@ -5,6 +5,7 @@ using System.Text.Json.Serialization;
 using Microsoft.AspNetCore.Identity;
 using TasteTrailData.Core.Common.Tokens.RefreshTokens.Entities;
 using TasteTrailData.Core.Feedbacks.Models;
+using TasteTrailData.Core.MenuItemLikes.Models;
 using TasteTrailData.Core.MenuItems.Models;
 using TasteTrailData.Core.Menus.Models;
 using TasteTrailData.Core.Venues.Models;
@@ -35,4 +36,7 @@ public class User : IdentityUser
 
     [JsonIgnore]
     public ICollection<Menu> Menus { get; set; }
+
+    [JsonIgnore]
+    public ICollection<MenuItemLike> MenuItemLikes { get; set; }
 }

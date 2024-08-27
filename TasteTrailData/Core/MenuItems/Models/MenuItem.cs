@@ -1,6 +1,8 @@
 #pragma warning disable CS8618
 
+using System.Text.Json.Serialization;
 using TasteTrailData.Core.Common.Models.Base;
+using TasteTrailData.Core.MenuItemLikes.Models;
 
 namespace TasteTrailData.Core.MenuItems.Models;
 
@@ -20,7 +22,10 @@ public class MenuItem : ILikeable
 
         public int PopularityRate { get; set; }
 
-        public int MenuId { get; set; }
+        public required int MenuId { get; set; }
 
-        public string UserId { get; set; }
+        public required string UserId { get; set; }
+        
+        [JsonIgnore]
+        public ICollection<MenuItemLike> MenuItemLikes { get; set; }
 }
