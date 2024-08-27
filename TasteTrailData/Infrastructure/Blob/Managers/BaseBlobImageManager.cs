@@ -1,12 +1,9 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Azure.Storage.Blobs;
+using Microsoft.AspNetCore.Http;
 
 namespace TasteTrailData.Infrastructure.Blob.Managers;
 
-public abstract class BaseBlobImageManager
+public abstract class BaseBlobImageManager<TId>
 {
     protected readonly BlobServiceClient _blobServiceClient;
     protected readonly string _containerName;
@@ -29,4 +26,7 @@ public abstract class BaseBlobImageManager
 
         return blobClient.Uri.ToString();
     }
+
+    abstract public Task<string> DeleteImageAsync(TId id);
+	abstract public Task<string> SetImageAsync(TId id, IFormFile? logo);
 }
