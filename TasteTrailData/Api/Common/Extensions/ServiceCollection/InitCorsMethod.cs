@@ -8,21 +8,17 @@ public static class InitCorsMethod
     {
         serviceCollection.AddCors(options =>
         {
-            options.AddPolicy(name: "LocalHostPolicy", policyBuilder =>
+            options.AddPolicy("AllowAllOrigins", builder =>
             {
-                policyBuilder
-                    .WithOrigins("http://localhost")
-                    .AllowAnyHeader()
-                    .AllowAnyMethod();
-            });
-
-            options.AddPolicy(name: "BlazorPolicy", policyBuilder =>
-            {
-                policyBuilder
-                    .WithOrigins("http://20.218.160.138")
-                    .AllowAnyHeader()
-                    .AllowAnyMethod();
-            });
+                builder.WithOrigins(
+                    "http://localhost",
+                    "http://localhost:5137",
+                    "http://20.218.160.138:80",
+                    "http://20.218.160.138"
+                )
+                .AllowAnyHeader()
+                .AllowAnyMethod();
+            });
         });
     }
 }
