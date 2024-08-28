@@ -2,8 +2,12 @@ using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using TasteTrailData.Core.Common.Tokens.RefreshTokens.Configurations;
 using TasteTrailData.Core.Common.Tokens.RefreshTokens.Entities;
+using TasteTrailData.Core.FeedbackLikes.Configurations;
+using TasteTrailData.Core.FeedbackLikes.Models;
 using TasteTrailData.Core.Feedbacks.Configurations;
 using TasteTrailData.Core.Feedbacks.Models;
+using TasteTrailData.Core.MenuItemLikes.Configurations;
+using TasteTrailData.Core.MenuItemLikes.Models;
 using TasteTrailData.Core.MenuItems.Configurations;
 using TasteTrailData.Core.MenuItems.Models;
 using TasteTrailData.Core.Menus.Configurations;
@@ -25,11 +29,15 @@ public class TasteTrailDbContext : IdentityDbContext<User, Role, string>
 
     public DbSet<MenuItem> MenuItems { get; set; }
 
+    public DbSet<MenuItemLike> MenuItemLikes { get; set; }
+
     public DbSet<RefreshToken> RefreshTokens { get; set; }
 
     public DbSet<VenuePhoto> VenuePhotos { get; set; }
 
     public DbSet<Feedback> Feedbacks { get; set; }
+
+    public DbSet<FeedbackLike> FeedbackLikes { get; set; }
 
     public TasteTrailDbContext(DbContextOptions options) : base(options)
     {}
@@ -38,8 +46,10 @@ public class TasteTrailDbContext : IdentityDbContext<User, Role, string>
         base.OnModelCreating(modelBuilder);
         
         modelBuilder.ApplyConfiguration(new FeedbackConfiguration());
+        modelBuilder.ApplyConfiguration(new FeedbackLikeConfiguration());
         modelBuilder.ApplyConfiguration(new MenuConfiguration());
         modelBuilder.ApplyConfiguration(new MenuItemConfiguration());
+        modelBuilder.ApplyConfiguration(new MenuItemLikeConfiguration());
         modelBuilder.ApplyConfiguration(new VenueConfiguration());
         modelBuilder.ApplyConfiguration(new VenuePhotoConfiguration());
         modelBuilder.ApplyConfiguration(new RefreshTokenConfiguration());
