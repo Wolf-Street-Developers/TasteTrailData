@@ -20,8 +20,6 @@ public class MenuItem : ILikeable
 
         public int Likes { get; set; }
 
-        public int PopularityRate { get; set; }
-
         public required int MenuId { get; set; }
 
         public required string UserId { get; set; }

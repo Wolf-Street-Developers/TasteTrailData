@@ -29,9 +29,6 @@ public class MenuItemConfiguration : IEntityTypeConfiguration<MenuItem>
         builder.Property(mi => mi.UserId)
             .IsRequired();
 
-        builder.Property(mi => mi.PopularityRate)
-            .IsRequired();
-
         builder.HasMany(u => u.MenuItemLikes)
             .WithOne()
             .HasForeignKey(r => r.MenuItemId)
