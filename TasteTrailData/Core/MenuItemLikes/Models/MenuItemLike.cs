@@ -2,7 +2,7 @@ namespace TasteTrailData.Core.MenuItemLikes.Models;
 
 public class MenuItemLike
 {
-    public required int Id { get; set; }
+    public int Id { get; set; }
     
     public required int MenuItemId { get; set; }
 
