@@ -32,7 +32,6 @@ public class Venue : ICreateable, IRateable, IFeedbackable
     
     public DateTime CreationDate { get; set; }
 
-
     [JsonIgnore]
     public ICollection<Menu> Menus { get; set; }
 
@@ -43,4 +42,7 @@ public class Venue : ICreateable, IRateable, IFeedbackable
     public ICollection<Feedback> Feedbacks { get; set; }
 
     public required string UserId { get; set; }
+
+    public double Longtitude { get; set; }
+    public double Latitude { get; set; }
 }
