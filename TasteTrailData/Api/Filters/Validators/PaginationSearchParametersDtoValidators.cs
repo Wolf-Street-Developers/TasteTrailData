@@ -3,9 +3,9 @@ using TasteTrailData.Infrastructure.Filters.Dtos;
 
 namespace TasteTrailData.Api.Filters.Validators;
 
-public class FilterParametersPaginationDtoValidator : AbstractValidator<PaginationParametersDto>
+public class PaginationSearchParametersDtoValidators : AbstractValidator<PaginationSearchParametersDto>
 {
-    public FilterParametersPaginationDtoValidator()
+    public PaginationSearchParametersDtoValidators()
     {
         RuleFor(fp => fp.PageNumber)
             .NotEmpty()
@@ -15,5 +15,8 @@ public class FilterParametersPaginationDtoValidator : AbstractValidator<Paginati
             .NotEmpty()
             .GreaterThan(0)
             .LessThan(100);
+
+        RuleFor(fp => fp.SearchTerm)
+            .MaximumLength(500);
     }
 }
