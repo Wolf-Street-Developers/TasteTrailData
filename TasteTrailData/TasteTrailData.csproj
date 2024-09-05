@@ -6,7 +6,7 @@
     <Nullable>enable</Nullable>
 
     <PackageId>TasteTrailData</PackageId>
-    <Version>3.2.0</Version>
+    <Version>3.3.0</Version>
     <Author>Wolf-Street-Developers</Author>
     <Product>TasteTrail</Product>
   </PropertyGroup>

@@ -3,6 +3,7 @@
 using System.ComponentModel;
 using System.Text.Json.Serialization;
 using Microsoft.AspNetCore.Identity;
+using TasteTrailData.Core.Common.Models.Base;
 using TasteTrailData.Core.Common.Tokens.RefreshTokens.Entities;
 using TasteTrailData.Core.FeedbackLikes.Models;
 using TasteTrailData.Core.Feedbacks.Models;
@@ -13,7 +14,7 @@ using TasteTrailData.Core.Venues.Models;
 
 namespace TasteTrailData.Core.Users.Models;
 
-public class User : IdentityUser
+public class User : IdentityUser, IBanable, IMuteable
 {
     [DefaultValue(false)]
     public bool IsBanned { get; set; }

@@ -12,4 +12,12 @@ public enum FilterType
     OldestFirst,
 
     LowestRated,
+
+    Muted,
+
+    NotMuted,
+
+    Banned,
+
+    NotBanned,
 }
